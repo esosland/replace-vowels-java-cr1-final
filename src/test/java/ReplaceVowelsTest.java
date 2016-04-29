@@ -27,5 +27,12 @@ public class ReplaceVowelsTest {
     assertEquals("- fr--ndly m--s-", replaceVowels.replaceAllVowels("a friendly mouse"));
   }
 
+  @Test
+  public void replaceAllVowels_upperOrLowerCase_AFriendlyMouse() {
+    ReplaceVowels replaceVowels = new ReplaceVowels();
+    assertEquals("- Fr--ndly M--s-", replaceVowels.replaceAllVowels("A Friendly Mouse"));
+  }
+
+
 
 }

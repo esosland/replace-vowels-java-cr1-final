@@ -15,7 +15,7 @@ public class ReplaceVowels {
   public static String replaceAllVowels(String forInputPhrase) {
     String results = "";
 
-    String output = forInputPhrase.replaceAll("[aeiou]", "-");
+    String output = forInputPhrase.replaceAll("[aeiouAEIOU]", "-");
     results = output;
     return results;
   }
