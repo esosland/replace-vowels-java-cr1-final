@@ -1,5 +1,7 @@
-public class ReplaceVowels {
+import java.util.Arrays;
+import java.util.ArrayList;
 
+public class ReplaceVowels {
   public String replaceNothing(String forInputtedPhrase) {
     String consonants = "b";
     return consonants;
@@ -8,5 +10,13 @@ public class ReplaceVowels {
   public String replaceVowels(String forInputtedPhrase) {
     String vowels = "a";
     return "-";
+  }
+
+  public static String replaceAllVowels(String forInputPhrase) {
+    String results = "";
+
+    String output = forInputPhrase.replaceAll("[aeiou]", "-");
+    results = output;
+    return results;
   }
 }
