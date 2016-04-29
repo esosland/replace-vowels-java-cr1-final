@@ -20,10 +20,14 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/results.vtl");
 
-      String replaceAllVowels = request.queryParams("results");
+      String inputtedPhrase = request.queryParams("results");
 
-      // model.put("replaceAllVowels", results);
-      model.put("results", request.queryParams("results"));
+      ReplaceVowels replaceVowels = new ReplaceVowels();
+      String results = replaceVowels.replaceAllVowels(inputtedPhrase);
+
+      model.put("inputtedPhrase", inputtedPhrase);
+      model.put("results", results);
+      model.put("inputtedPhrase", request.queryParams("inputtedPhrase"));
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
