@@ -21,4 +21,12 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Replace Vowels");
   }
+
+  @Test
+  public void replaceAllVowels() {
+    goTo("http://localhost:4567");
+    fill("#results").with("a");
+    submit(".btn");
+    assertThat(pageSource()).contains("-");
+  }
 }

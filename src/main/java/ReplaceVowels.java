@@ -2,12 +2,12 @@ import java.util.Arrays;
 import java.util.ArrayList;
 
 public class ReplaceVowels {
-  public String replaceNothing(String forInputtedPhrase) {
+  public String replaceNothing(String forInputPhrase) {
     String consonants = "b";
     return consonants;
   }
 
-  public String replaceVowels(String forInputtedPhrase) {
+  public String replaceVowels(String forInputPhrase) {
     String vowels = "a";
     return "-";
   }

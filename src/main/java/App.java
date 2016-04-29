@@ -11,10 +11,21 @@ public class App {
     String layout = "templates/layout.vtl";
 
     get("/", (request, response) -> {
-        Map<String, Object> model = new HashMap<String, Object>();
-        model.put("template", "templates/home.vtl");
-        return new ModelAndView(model, layout);
-      }, new VelocityTemplateEngine());
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/home.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/results", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/results.vtl");
+
+      String replaceAllVowels = request.queryParams("results");
+
+      // model.put("replaceAllVowels", results);
+      model.put("results", request.queryParams("results"));
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
 
 
   }
