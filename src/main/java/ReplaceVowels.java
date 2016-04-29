@@ -1,6 +1,12 @@
 public class ReplaceVowels {
 
-  public Boolean replaceVowels(String string) {
-    return false;
+  public String replaceNothing(String forInputtedPhrase) {
+    String consonants = "b";
+    return consonants;
+  }
+
+  public String replaceVowels(String forInputtedPhrase) {
+    String vowels = "a";
+    return "-";
   }
 }

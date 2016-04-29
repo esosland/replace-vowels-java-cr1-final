@@ -4,7 +4,15 @@ import static org.junit.Assert.*;
 public class ReplaceVowelsTest {
 
   @Test
-  public void replaceVowels_exceptInTheCaseOfConsonants_b() {
-
+  public void replaceNothing_inTheCaseOfConsonants_b() {
+    ReplaceVowels replaceVowels = new ReplaceVowels();
+    assertEquals("b", replaceVowels.replaceNothing("b"));
   }
+
+  @Test
+  public void replaceVowels_ifLetterIsVowel_a() {
+    ReplaceVowels replaceVowels = new ReplaceVowels();
+    assertEquals("-", replaceVowels.replaceVowels("a"));
+  }
+
 }
