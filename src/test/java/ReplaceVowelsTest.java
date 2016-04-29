@@ -21,5 +21,11 @@ public class ReplaceVowelsTest {
     assertEquals("c--l-fl-w-r", replaceVowels.replaceAllVowels("cauliflower"));
   }
 
+  @Test
+  public void replaceAllVowels_phraseIsMultipleWords_afriendlymouse() {
+    ReplaceVowels replaceVowels = new ReplaceVowels();
+    assertEquals("- fr--ndly m--s-", replaceVowels.replaceAllVowels("a friendly mouse"));
+  }
+
 
 }
